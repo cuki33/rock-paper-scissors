@@ -63,8 +63,8 @@ function playGame (humanChoice, computerChoice) {
 const humanChoiceGame = getHumanChoice();
 const compChoiceGame = getComputerChoice();
 
-console.log("You chose: " + humanChoiceGame);
-console.log("Computer chose: " + compChoiceGame);
+console.log("You chose: " + humanChoiceGame.toLowerCase());
+console.log("Computer chose: " + compChoiceGame.toLowerCase());
 
 if (humanChoiceGame === compChoiceGame) {
     console.log("It's a tie !");
