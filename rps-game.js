@@ -19,7 +19,7 @@ else {
 // comp choice
 
 function getComputerChoice () {
-    const options = ["Scissors", "Paper", "Rock"];
+    const options = ["scissors", "paper", "rock"];
     const game = Math.floor(Math.random() * 3);
     return options [game];
     }
