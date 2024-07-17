@@ -59,19 +59,19 @@ console.log('Scores: Human - ${humanScore}, Computer - ${computerScore}');
 */
 
 
-function playGame (humanChoice, computerChoice) {
-const humanChoiceGame = getHumanChoice();
-const compChoiceGame = getComputerChoice();
+function playingGame (humanChoice, computerChoice) {
+const humanChoiceRPS = getHumanChoice();
+const compChoiceRPS = getComputerChoice();
 
-console.log("You chose: " + humanChoiceGame.toLowerCase());
-console.log("Computer chose: " + compChoiceGame.toLowerCase());
+console.log("You chose: " + humanChoiceRPS.toLowerCase());
+console.log("Computer chose: " + compChoiceRPS.toLowerCase());
 
-if (humanChoiceGame === compChoiceGame) {
+if (humanChoiceRPS === compChoiceRPS) {
     console.log("It's a tie !");
 } else if (
-    (humanChoiceGame === "rock" && compChoiceGame === "scissors") ||
-    (humanChoiceGame === "paper" && compChoiceGame === "rock") ||
-    (humanChoiceGame === "scissors" && compChoiceGame === "paper")
+    (humanChoiceRPS === "rock" && compChoiceRPS === "scissors") ||
+    (humanChoiceRPS === "paper" && compChoiceRPS === "rock") ||
+    (humanChoiceRPS === "scissors" && compChoiceRPS === "paper")
 ) {
     console.log("You Win !");
     humanScore++;
@@ -80,7 +80,7 @@ if (humanChoiceGame === compChoiceGame) {
     computerScore++;
 };
 
-console.log(`Scores: Human - ${humanScore}, Computer - ${computerScore}`);
+console.log(`Scores: Player - ${humanScore}, Computer - ${computerScore}`);
 
 
 if (humanScore === 5) {
@@ -89,9 +89,9 @@ if (humanScore === 5) {
     console.log("Computer won the game !");
 } else if (computerScore < 5 || humanScore < 5) {
     console.log("The game goes on...");
-    return playGame (humanChoice, computerChoice);
+    return playingGame (humanChoice, computerChoice);
 };
 }
 
-window.onload = playGame; 
+window.onload = playingGame; 
 
