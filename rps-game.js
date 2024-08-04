@@ -1,11 +1,6 @@
 let humanScore = 0;
 let computerScore = 0;
 
-function getHumanChoice() {
-    // For this example, we'll just return 'rock'. Replace this with your logic for getting the human's choice.
-    return 'rock';
-}
-
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
     const randomIndex = Math.floor(Math.random() * choices.length);
